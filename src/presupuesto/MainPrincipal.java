@@ -8,6 +8,7 @@ package presupuesto;
 import java.util.ArrayList;
 import java.util.List;
 import modelos.*;
+import vistas.FrmHome;
 
 /**
  *
@@ -77,6 +78,8 @@ public class MainPrincipal {
 //        System.out.println(uno.getMarca().getNombre());
 //        System.out.println(coca.getNombre());
 
+        FrmHome miForm = new FrmHome();
+        miForm.setVisible(true);
     }
     
 }
