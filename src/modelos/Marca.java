@@ -27,4 +27,20 @@ public class Marca {
     {
         this.nombre = n;
     }
+    
+    public boolean getEstado()
+    {
+        return this.estado;
+    }
+    
+    public void setEstado()
+    {
+        if(this.estado)
+        {
+            this.estado = false;
+        }else{
+            this.estado = true;
+        }
+    }
+    
 }

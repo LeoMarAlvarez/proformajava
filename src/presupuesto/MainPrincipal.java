@@ -5,8 +5,10 @@
  */
 package presupuesto;
 
+import Controladores.ControladorPrincipal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JFrame;
 import modelos.*;
 import vistas.FrmHome;
 
@@ -78,8 +80,21 @@ public class MainPrincipal {
 //        System.out.println(uno.getMarca().getNombre());
 //        System.out.println(coca.getNombre());
 
-        FrmHome miForm = new FrmHome();
+        mana.setEstado();
+        List<Marca>todasLasMarcas = new ArrayList<>();
+        todasLasMarcas.add(coca);
+        todasLasMarcas.add(mana);
+        todasLasMarcas.add(lev);
+        
+        ControladorPrincipal cp = new ControladorPrincipal();
+        cp.setMarcas(todasLasMarcas);
+        
+        FrmHome miForm = new FrmHome(cp);
+        miForm.setExtendedState(JFrame.MAXIMIZED_BOTH);
         miForm.setVisible(true);
+
+//          FrmPrincipal frmPrincipal = new FrmPrincipal();
+//          frmPrincipal.setVisible(true);
     }
     
 }
