@@ -15,6 +15,7 @@ import modelos.Producto;
  */
 public class ControladorProducto {
     private List<Producto> productos;
+    //private ControladoraProducoJPA productoJpa;
     
     public ControladorProducto(){
         this.productos = new ArrayList<>();
@@ -34,8 +35,6 @@ public class ControladorProducto {
     {
         return this.productos;
     }
-            
     
-    
-    
+    //todas las cosas del producto
 }

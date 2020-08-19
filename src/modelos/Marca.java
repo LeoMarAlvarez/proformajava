@@ -5,12 +5,21 @@
  */
 package modelos;
 
+import javax.persistence.*;
+
 /**
  *
  * @author leo
  */
+@Table(name="marcas")
+@Entity
 public class Marca {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @Column(length = 100, unique = true)
     private String nombre;
+    @Column(nullable = false, insertable = true)
     private boolean estado;
     
     public Marca(String nombre){
